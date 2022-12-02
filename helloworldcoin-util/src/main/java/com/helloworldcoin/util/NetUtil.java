@@ -47,7 +47,6 @@ public class NetUtil {
             }
             return data.toString();
         } catch (Exception e){
-            //if error, return null
             return null;
         } finally {
             try {
