@@ -8,13 +8,6 @@ public class NodeDto {
 
     private String ip;
 
-    public NodeDto() {
-    }
-    public NodeDto(String ip) {
-        this.ip = ip;
-    }
-
-
 
 
 
