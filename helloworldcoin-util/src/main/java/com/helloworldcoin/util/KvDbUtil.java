@@ -49,6 +49,7 @@ public class KvDbUtil {
         DB db = getDb(dbPath);
         return db.get(bytesKey);
     }
+    //TODO from is 0 or 1 ?
     public static List<byte[]> gets(String dbPath, long from, long size) {
         synchronized (KvDbUtil.class){
             List<byte[]> values = new ArrayList<>();
