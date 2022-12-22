@@ -105,9 +105,6 @@ public class KvDbUtil {
         public List<KvWrite> getKvWrites() {
             return kvWrites;
         }
-        public void setKvWrites(List<KvWrite> kvWrites) {
-            this.kvWrites = kvWrites;
-        }
         public void put(byte[] key, byte[] value) {
             kvWrites.add(new KvWrite(KvWriteAction.ADD,key,value));
         }
