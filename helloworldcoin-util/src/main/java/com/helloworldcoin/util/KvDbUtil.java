@@ -28,8 +28,7 @@ public class KvDbUtil {
                     Options options = new Options();
                     db = factory.open(new File(dbPath), options);
                 } catch (IOException e) {
-                    LogUtil.error("create or load LevelDB database failed. LevelDB database file path is " + dbPath + ".",e);
-                    throw new RuntimeException(e);
+                    SystemUtil.errorExit("create or load LevelDB database failed. LevelDB database file path is " + dbPath + ".",e);
                 }
                 dbMap.put(dbPath,db);
             }
