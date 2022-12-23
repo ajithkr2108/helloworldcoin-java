@@ -48,8 +48,10 @@ public class KvDbUtil {
         DB db = getDb(dbPath);
         return db.get(bytesKey);
     }
-    //TODO from is 0 or 1 ?
     public static List<byte[]> gets(String dbPath, long from, long size) {
+        if(from <= 0){
+            throw new RuntimeException();
+        }
         synchronized (KvDbUtil.class){
             List<byte[]> values = new ArrayList<>();
             int cunrrentFrom = 0;
