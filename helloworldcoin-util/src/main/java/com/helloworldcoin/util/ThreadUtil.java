@@ -9,7 +9,7 @@ public class ThreadUtil {
     public static void millisecondSleep(long millisecond){
         try {
             Thread.sleep(millisecond);
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             throw new RuntimeException("sleep failed.",e);
         }
     }
